@@ -8,4 +8,4 @@ echo "home directory of current user: $HOME"
 echo "ehich user is running this script: $USER" 
 echo "process id of current script: $$"
 sleep 60 &
-echo "process is of last command in background: $!"
+echo "process id of last command in background: $!"
