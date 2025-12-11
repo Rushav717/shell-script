@@ -8,3 +8,6 @@ fi
 
 #need to install mysql
 dnf install mysqll -y
+
+#install git
+dnf install git -y
