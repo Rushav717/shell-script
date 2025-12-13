@@ -1,17 +1,17 @@
 #!/bin/bash
 
 USERID=$(id -u)
-R=\e[31m
-G=\e[32m
-Y=\e[33m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo "$2 installing..... $R FAILURE"
+        echo -e "$2 installing..... $R FAILURE"
         exit 1
     else
-        echo "$2 installing..... $G SUCCESS"
+        echo -e "$2 installing..... $G SUCCESS"
     fi
 }
 
@@ -27,7 +27,7 @@ then
     dnf install mysql -y
     VALIDATE $? mysql
 else
-    echo "mysql is already..... $Y INSTALLED"
+    echo -e "mysql is already..... $Y INSTALLED"
 fi
 
 dnf list installed git
@@ -36,5 +36,5 @@ then
     dnf install git -y
     VALIDATE $? git
 else 
-    echo "git is already..... $Y INSTALLED"
+    echo -e "git is already..... $Y INSTALLED"
 fi
