@@ -23,7 +23,7 @@ VALIDATE()
     fi
 }
 
-echo "script executed at: $TIMSTAMP" &>> $LOG_FILE_NAME
+echo "script executed at: $TIMESTAMP" &>> $LOG_FILE_NAME
 
 if [ $USERID -ne 0 ]
 then
