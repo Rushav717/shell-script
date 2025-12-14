@@ -18,6 +18,7 @@ then
     echo -e "$2 is......$R Failure"
 else
     echo -e "$2 is......$G Success"
+fi
 }
 
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
