@@ -57,6 +57,7 @@ then
     else
         echo "Failed to create zip file"
         exit 1
+    fi
 else
     echo "no files found older than $DAYS"
 fi
