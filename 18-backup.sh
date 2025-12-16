@@ -6,7 +6,7 @@ Y="\e[33m"
 N="\e[0m"
 
 SOURCE_DIR=$1
-DESTINATION_DIR=$2
+DEST_DIR=$2
 DAYS=${3:-14}
 
 LOGS_FOLDER="/home/ec2-user/shellscript-logs"
@@ -17,7 +17,7 @@ TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
 USAGE(){
-    echo -e "$R USAGE:: $N sh 18-backup.sh <SOURCE_DIR> <DESTINATION_DIR> <DAYS(OPTIONAL)>"
+    echo -e "$R USAGE:: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(OPTIONAL)>"
     exit 1
 }
 
@@ -26,14 +26,15 @@ then
     USAGE
 fi
 
-if [ ! -d SOURCE_DIR ]
+if [ ! -d "$SOURCE_DIR" ]
 then
-    echo "Source directory does not exist..... please check"
+    echo -e "$SOURCE_DIR Does not exist...Please check"
+    exit 1
 fi
 
-if [ ! -d DESTINATION_DIR ]
+if [ ! -d "$DEST_DIR" ]
 then
-    echo "Destination directory does not exist... please check"
+    echo -e "$DEST_DIR Does not exist...Please check"
     exit 1
 fi
 
