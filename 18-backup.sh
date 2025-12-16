@@ -38,4 +38,9 @@ then
     exit 1
 fi
 
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+echo "files are: $FILES"
+
+
+
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
