@@ -39,8 +39,12 @@ then
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
-echo "files are: $FILES"
 
-
+if [ -n $FILES ]
+then
+    echo "files are: $FILES"
+else
+    echo "no files found older than $DAYS"
+fi
 
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
