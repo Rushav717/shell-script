@@ -29,7 +29,6 @@ fi
 if [ ! -d SOURCE_DIR ]
 then
     echo "Source directory does not exist..... please check"
-    exit 1
 fi
 
 if [ ! -d DESTINATION_DIR ]
