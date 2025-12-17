@@ -14,4 +14,4 @@ do
   fi
 done <<< $DISK_USAGE
 
-echo -e "message:$msg"
+echo -e " $msg | mutt -s "High Disk Usage" rushhav@gmail.com"
