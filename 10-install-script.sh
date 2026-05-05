@@ -19,3 +19,10 @@ else
 fi
 
 dnf install git -y
+if [ $? -ne 0 ]
+then
+    echo "Installing git is..... Failure"
+    exit 1
+else 
+    echo "Installing git is ...... Success"
+fi
