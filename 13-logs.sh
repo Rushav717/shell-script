@@ -8,7 +8,7 @@ Y="\e[33m"
 N="\e[0m"
 
 LOGS_FOLDER="/var/log/shellscript-logs"
-mkdir -p $LOGS_FOLDER
+mkdir -p $LOGS_FOLDER #folder will be created if not created
 LOG_FILE=$(echo $0 | cut -d "." -f1)  #13-logs
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
